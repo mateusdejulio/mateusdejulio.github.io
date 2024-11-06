@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sócio - Corinthians</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="icon" type="image/png" href="antigo.png">
+	<style> @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); 
+
+			body{
+				height: 100vh;
+			}
+
+	</style>
+</head>
+
+<body>
+
+	<nav>
+		<a href="index.html"><img src="escudocorinthians.png" id="escudo"></a>
+		<span> <a href="index.html">Início</a> </span>
+		<span>|</span>
+		<span> <a href="titulos.html">Títulos</a> </span>
+		<span>|</span>
+		<span>Sócio</span>
+		<span>|</span>
+	</nav>
+
+
+<div id="conteudo">
+	<div id="box">
+
+		<h1>Cadastro de sócios</h1>
+
+		<form>
+
+			<label for="nome">Nome</label>
+			<input type="text" name="nome" id="nome" placeholder="Digite um nome" required minlength="5">
+		<br>
+			<label for="email">E-Mail</label>
+			<input type="email" id="email" required placeholder="nome@email.com">
+		<br>
+			<label for="senha">Senha</label>
+			<input type="password" id="senha" minlength="6" required>
+		<br>
+
+			<label>Sexo</label>
+			<input type="radio" name="sexo" id="f" value="f">
+			<label for="sexo">F</label>
+			<input type="radio" name="sexo" id="m" value="m">
+			<label for="sexo">M</label>
+		<br><br>
+			<label for="aniversario">Data de Aniversário</label>
+			<input type="date" class="formataInput" id="aniversario" required>
+		<br>
+			<label>Plano</label>
+		<select name="plano" id="plano" required>
+			<option value="vazio" selected></option>
+			<option value="Bronze" >Bronze</option>
+			<option value="Prata">Prata</option>
+			<option value="Ouro">Ouro</option>
+			<option value="Preto">Preto</option>
+		</select>
+		<br><br>
+			<input type="submit" value="Cadastrar">
+
+		</form>
+	</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+
