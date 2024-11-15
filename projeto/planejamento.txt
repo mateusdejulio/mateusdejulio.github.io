@@ -1,0 +1,6 @@
+index - fazer um painel com rolagem de imagens com as novas camisetas, abaixo fazer as flex box com os produtos pra vender
+
+sócio - fazer um formulario de cadastro
+
+titulos - colocar uma lista formatada com css ( tem arquivo exemplo )
+
