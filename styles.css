@@ -1,0 +1,71 @@
+@font-face{
+    font-family: nav;
+
+    /*Caso a fonte esteja na mesma pasta*/
+    src: url("fonts/NuberNext-Black-BF63c8a0b26988c.otf");
+}
+
+#rosa{
+    color: darkred;
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+
+nav{
+    box-shadow: 2px 2px 5px darkred;
+    /*border-bottom: 2px solid darkred;*/
+}
+
+#limeira{
+    font-size: 30px;
+    margin-top: 3px;
+}
+
+#sobre{
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 2%;
+}
+
+.myContainer{
+    margin-top: 2%;
+    /*background-color: blueviolet;*/
+    align-items: center;
+   
+}
+
+.imgcarrosel{
+    width: 447px;
+    height: 400px ;
+}
+
+.myCarosel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 5%;
+}
+
+.carousel{
+    margin-top: 5%;
+}
+
+.espacador{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.espacadorgrid{
+    margin-bottom: 5%;
+}
+
+
+.inicio{
+    width: 70%;
+}
+
+select{
+    border-radius: 10px;
+}
