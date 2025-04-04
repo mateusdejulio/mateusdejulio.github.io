@@ -58,7 +58,7 @@
   
   <!-- Inicio form -->
 
-  <div id="liveAlertPlaceholder"></div>
+ 
 
    <form class="row g-3 needs-validation" novalidate id="meuFormulario">
     <div class="col-md-6">
@@ -77,7 +77,7 @@
     </div>
     <div class="col-md-6">
       <label for="nomeresp" class="form-label">Nome do Responsável:</label>
-      <input type="tel" class="form-control" id="nomeresp" required>
+      <input type="text" class="form-control" id="nomeresp" required>
       <div class="invalid-feedback">
       Campo obrigatório!
       </div>
@@ -118,12 +118,14 @@
 </div>
 
     
-    
+    <div id="liveAlertPlaceholder"></div>
  
 
     <div class="col-12 text-center mb-2">
       <button type="submit" class="btn btn-primary w-100 w-md-auto">Enviar</button>
     </div>
+
+
  
 
     
@@ -198,19 +200,29 @@
   const form = document.getElementById('meuFormulario');
 
   form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Impede o envio do formulário
+  event.preventDefault(); // Impede o envio do formulário
 
-    if (!form.checkValidity()) {
-      event.stopPropagation();
-      appendAlert('Por favor, preencha todos os campos obrigatórios!', 'danger');
-    } else {
-      appendAlert('Inscrição enviada com sucesso!', 'success');
-      form.reset(); // Limpa o formulário após o envio bem-sucedido
-      form.classList.remove('was-validated');
-    }
+  if (!form.checkValidity()) {
+    event.stopPropagation();
+    appendAlert('Por favor, preencha todos os campos obrigatórios!', 'danger');
+  } else {
+    appendAlert('Inscrição enviada com sucesso!', 'success');
 
-    form.classList.add('was-validated');
-  });
+    // 🔴 REMOVER a classe 'was-validated' antes de resetar
+    form.classList.remove('was-validated');
+
+    // 🔄 Resetar o formulário após um pequeno delay para evitar "glitches visuais"
+    setTimeout(() => {
+      form.reset();
+    }, 100); // 100ms já é suficiente
+
+    return; // Sai da função para evitar adicionar 'was-validated' novamente
+  }
+
+  // ✅ Adicionar validação visual SOMENTE se o formulário não estiver válido
+  form.classList.add('was-validated');
+});
+
 </script>
 </body>
 </html>
