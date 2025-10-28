@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual a Bandeira? - Pontuação</title>
+    <script src="script.js"></script>
+    <style>
+        
+        body{
+        font-family: Arial, sans-serif;
+    }
+
+        #jogar{
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: none;
+    }
+
+        #jogar:hover{
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+      #limpar{
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: none;
+    }
+
+      #limpar:hover{
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+     
+
+    </style>
+</head>
+
+<body onload="iniciarPagPontuacao()">
+
+
+<center>
+    <h1>Qual a Bandeira?</h1>
+<br>
+<br>
+    <h3>Quer continuar jogando, <span id="nome"></span>?</h3> 
+<br><br>
+    <h4>Suas pontuações:</h4>
+    <p>Corretas: <span id="corretas"></span></p>
+    <p>Erradas: <span id="erradas"></span></p>
+<br><br>
+    <button id="jogar" onclick="jogar()">Continuar  </button>
+    <button id="limpar" onclick="limparJogador()">Limpar Jogador</button>
+
+</center>
+
+</body>
+</html>

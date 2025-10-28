@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual a bandeira? - Jogo</title>
+    <script src="script.js"></script>
+    <style>
+
+    body{
+        font-family: Arial, sans-serif;
+    }
+
+    b{
+        font-size: 16px;
+    }
+
+    #tabelaPontuacao{
+        position: absolute;
+        right: 30px;
+        top: 300px;
+        width: 30px;
+        height: 100px;
+        border: 1px solid black;
+    }
+
+    #voltar{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    #voltar:hover{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+    #resposta{
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+    #enviar{
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    #enviar:hover{
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+    #sortearDenovo{
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    #sortearDenovo:hover{
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+    #enviar:hover{
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+    
+   
+    #bandeira{
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 300px;
+        height: 200px;
+    }
+
+    #bandeira img{
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+   }
+
+   
+
+   @media (max-width: 600px) {
+
+        h1 {
+            font-size: 20px;
+        }
+
+        #voltar {
+            position: static;
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+                font-size: 14px;
+        }
+
+        #bandeira {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        height: auto;    
+    }
+
+        #bandeira img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #resposta {
+            width: 80%;
+            font-size: 14px;
+        }
+
+        #enviar, #sortearDenovo {
+            width: 80%;
+            font-size: 14px;
+            padding: 12px;
+            margin: 10px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+
+        #resultado {
+            font-size: 18px;
+        }
+    }
+
+
+</style>    
+</head>
+
+<body onload="iniciar()">
+    
+    
+<center>
+
+    <h1>Qual a Bandeira?</h1>
+    <button id="voltar" onclick="voltar()">Voltar e Salvar</button>
+    
+<br><br>
+    <span id="mensagem"></span>
+<br>
+<hr>
+<br>
+
+<table>
+    <tr>
+        <span id="tempo">5</span>
+    </tr>
+    <tr>    
+        <td>                
+        <br><br>
+            <div id="bandeira"><img src="" id="imgBandeira"></div>
+        
+        <td style="color: white;">
+            ........................
+        </td>
+
+        </td>
+        <td>
+            <b>Corretas: <span id="corretas">0</span></b>   <br><br><br>
+            <b>Erradas: <span id="erradas">0</span></b>
+        </td>
+
+    </tr>
+    <tr>
+        <td colspan="3">
+
+        <center>
+            <br><br>
+                <input type="text" id="resposta" onkeydown="if(event.key === 'Enter'){ checar(); }">
+            <br><br>
+                <button id="enviar" onclick="checar()">Enviar</button>
+                <button id="sortearDenovo" onclick="chamarBandeira()">Outro País</button>
+            <br><br>
+                
+            
+        </center>
+        </td>  
+    </tr>
+    <tr>
+        <td colspan="3">
+            <center>
+                <span id="resultado"></span>
+            </center>
+        </td>
+    </tr>
+
+
+</table>
+
+<!--
+    <span id="tempo">5</span>
+<br><br>
+    <div id="bandeira"><img src="" id="imgBandeira"></div>
+<br>
+    <input type="text" id="resposta">
+<br><br>
+    <button id="sortearDenovo" onclick="chamarBandeira()">Outro País</button>
+    <button id="enviar" onclick="checar()">Enviar</button>
+<br><br>
+    <span id="resultado"></span>
+<br><br>
+<!-->
+</center>
+
+</body>
+</html>
