@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Consulta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {}
+            }
+        }
+    </script>
+    <!-- Add stylesheets or meta tags here -->
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <!-- Header -->
+         <!--
+        <header class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div class="flex items-center justify-between">
+                    <button onclick="showView('view-home')" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                        <div>
+                            <h1 class="text-xl font-semibold text-indigo-600">Sistema de Gestão de Feira</h1>
+                            <p class="text-xs text-gray-500">Gerenciamento de Alunos e Palestras</p>
+                        </div>
+                    </button>
+        -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-center">
+                    <nav class="md:flex gap-6">
+                        <button onclick="window.location.href='index.html'" id="nav-home" class="nav-link transition-colors text-indigo-600">
+                            Início
+                        </button>
+                        <button onclick="window.location.href='cadastro.html'" id="nav-cadastro" class="nav-link transition-colors text-gray-600 hover:text-indigo-600">
+                            | Cadastrar Alunos
+                        </button>
+                        <button onclick="window.location.href='consulta.html'" id="nav-consulta" class="nav-link transition-colors text-gray-600 hover:text-indigo-600">
+                            | Consultar Inscrições
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+    <!-- View: Consulta de Inscrições -->
+        <div id="view-consulta" class="view">
+            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-purple-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="m21 21-4.35-4.35"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900">Consulta de Inscrições</h2>
+                            <p class="text-sm text-gray-600">Visualize e gerencie as inscrições em palestras</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="relative">
+                            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="m21 21-4.35-4.35"/>
+                            </svg>
+                            <input type="text" id="search-input" oninput="filtrarInscricoes()"
+                                placeholder="Buscar por nome, e-mail ou palestra..."
+                                class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none">
+                        </div>
+                    </div>
+
+                    <div id="inscricoes-list" class="space-y-4">
+                        <!-- Será preenchido via JavaScript -->
+                    </div>
+
+                    <div id="inscricoes-footer" class="mt-6 pt-6 border-t border-gray-200">
+                        <!-- Será preenchido via JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
